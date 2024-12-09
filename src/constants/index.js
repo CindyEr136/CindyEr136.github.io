@@ -13,6 +13,7 @@ export const navLinks = [
     },
   ];
 
+  // #region images
   import cSharpIcon from "../assets/c-sharp.png";
   import cPlusIcon from "../assets/c-.png";
   import javaIcon from "../assets/java.png";
@@ -20,6 +21,9 @@ export const navLinks = [
   import COTLogo from "../assets/city-of-toronto-logo-8A5595A393-seeklogo.com.png";
   import CCLogo from "../assets/Screenshot_2024-12-08_at_8.56.21_PM-removebg-preview.png";
   import MFSLogo from "../assets/540f84_182fc00b2a9b40509d9b1ba42773665d~mv2.avif";
+  import heritage from "../assets/Screenshot 2024-12-09 at 1.12.44 PM.png";
+  import aimtrainer from "../assets/Screenshot 2024-12-03 at 1.18.13 PM.png";
+  // #endregion
 
   export const services = [
     { title: "C#", icon: cSharpIcon },
@@ -66,17 +70,31 @@ export const navLinks = [
   
   export const projects = [
     {
-      name: "WeatherPedia",
+      name: "Heritage Gift Shop",
       description:
-        "Web-based platform that allows users to access weather information for their location by entering it in the search field",
+        "Web-based platform that serves as an extension to the physical store, that provides a way to showcase products, support for cultural preservation and community engagement in a user-friendly way.",
       tags: [
-        { name: "Javascript", color: "blue-text-gradient" },
-        { name: "HTML", color: "green-text-gradient" },
-        { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
-        { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
+        { name: "Javascript" },
+        { name: "HTML" },
+        { name: "React.js" },
+        { name: "WebFlow" },
+        { name: "Strapi" }
       ],
-      image: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Projects/WeatherPedia.png",
-      source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
+      image: heritage,
+      source_code_link: "https://www.heritagegiftshop.org",
     },
+    {
+        name: "Aim Trainer",
+        description:
+          "Web-based platform that serves as an extension to the physical store in Jordan village, Ontario, that provides a way to showcase products, support for cultural preservation and community engagement in a user-friendly way.",
+        tags: [
+          { name: "Typescript" },
+          { name: "HTML" },
+          { name: "CSS" },
+          { name: "SimpleKit" }
+        ],
+        image: aimtrainer,
+        source_code_link: "https://cindyer136.github.io/aimtrainer/",
+      },
   ];
   
