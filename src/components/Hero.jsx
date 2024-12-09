@@ -1,11 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import cover from "../assets/bongo-cat-transparent.gif";
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
+      <div
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+      >
         {/* side design */}
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-secondary" />
@@ -13,13 +16,16 @@ const Hero = () => {
         </div>
 
         {/* name and intro */}
-        <div>
+        <div className="w-full">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-secondary">Cindy</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             A creative web designer and developer based in Toronto ON.
           </p>
+          <div className="w-full flex justify-center py-10 sm:py-20 md:py-32 lg:py-10">
+            <img src={cover} alt="cover" className="object-contain w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4" />
+          </div>
         </div>
       </div>
 

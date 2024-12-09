@@ -23,6 +23,8 @@ export const navLinks = [
   import MFSLogo from "../assets/540f84_182fc00b2a9b40509d9b1ba42773665d~mv2.avif";
   import heritage from "../assets/Screenshot 2024-12-09 at 1.12.44 PM.png";
   import aimtrainer from "../assets/Screenshot 2024-12-03 at 1.18.13 PM.png";
+  import bb from "../assets/Post 1080x1350.png";
+  import quiz from "../assets/Screenshot 2024-12-09 at 5.39.27 PM.png";
   // #endregion
 
   export const services = [
@@ -72,10 +74,9 @@ export const navLinks = [
     {
       name: "Heritage Gift Shop",
       description:
-        "Web-based platform that serves as an extension to the physical store, that provides a way to showcase products, support for cultural preservation and community engagement in a user-friendly way.",
+        "A web-based platform extending the physical store, providing a way to showcase products and community engagement.",
       tags: [
         { name: "Javascript" },
-        { name: "HTML" },
         { name: "React.js" },
         { name: "WebFlow" },
         { name: "Strapi" }
@@ -85,8 +86,8 @@ export const navLinks = [
     },
     {
         name: "Aim Trainer",
-        description:
-          "Web-based platform that serves as an extension to the physical store in Jordan village, Ontario, that provides a way to showcase products, support for cultural preservation and community engagement in a user-friendly way.",
+        description: 
+            "A web-based aim-trainer application designed to help users improve their percision and reaction time.",
         tags: [
           { name: "Typescript" },
           { name: "HTML" },
@@ -95,6 +96,30 @@ export const navLinks = [
         ],
         image: aimtrainer,
         source_code_link: "https://cindyer136.github.io/aimtrainer/",
+      },
+      {
+        name: "Brainy Bees",
+        description: 
+            "A prototype for a mobile AI learning assitance application, using reaserch done on user engagement and use habits",
+        tags: [
+          { name: "Figma" },
+          { name: "User Interviews" },
+          { name: "Design Thinking" },
+        ],
+        image: bb,
+        source_code_link: "https://www.figma.com/proto/6g63YxCVHzfhfk3NurAy6T/Brainy-Bees?node-id=0-1&t=KZlyQorjc9pyKZKh-1",
+      },
+      {
+        name: "Quiz",
+        description: 
+            "A web-based quiz application designed to create and manage quizzes efficiently. It offers users the ability to create unique quizzes, enabling complete customization.",
+        tags: [
+          { name: "Typescript" },
+          { name: "Preact" },
+          { name: "TypewindCSS" },
+        ],
+        image: quiz,
+        source_code_link: "https://cindyer136.github.io/quiz/",
       },
   ];
   
