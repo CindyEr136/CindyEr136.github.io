@@ -1,14 +1,26 @@
 import { BrowserRouter } from "react-router-dom";
 import React from "react";
-import { Hero } from "./components";
+import {
+  About,
+  Contact,
+  Experience,
+  Hero,
+  Navbar,
+  Works,
+} from "./components";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div>
+          <Navbar />
           <Hero />
         </div>
+        <About />
+        <Experience />
+        <Works />
+        <Contact />
       </div>
     </BrowserRouter>
   );

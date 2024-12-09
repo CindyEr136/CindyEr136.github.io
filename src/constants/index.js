@@ -14,10 +14,10 @@ export const navLinks = [
   ];
   
   export const services = [
-    { title: "C++", icon: "./images/c-.png" },
-    { title: "Java", icon: "./images/java.png" },
-    { title: "C#", icon: "./images/c-sharp.png" },
-    { title : "React" , icon: "./images/react.png"}
+    { title: "C++", icon: "./src/images/c-.png" },
+    { title: "Java", icon: "./src/images/java.png" },
+    { title: "C#", icon: "./src/images/c-sharp.png" },
+    { title : "React" , icon: "./src/images/react.png"}
   ];
   
   export const technologies = [
@@ -35,7 +35,7 @@ export const navLinks = [
     {
       title: "Technical Trainee",
       company_name: "The City of Toronto",
-      icon: "./images/city-of-toronto-logo-8A5595A393-seeklogo.com.png",
+      icon: "./src/images/city-of-toronto-logo-8A5595A393-seeklogo.com.png",
       date: "Sep 2024 - Dec 2024",
       points: [
         "Executed comprehensive data cleaning initiatives to enhance the quality of legacy data, meticulously aligning street names from over 12,000 entries with the GCC database for the Chapter 950 Bylaw project, ensuring data accuracy and consistency across systems",
@@ -46,7 +46,7 @@ export const navLinks = [
     {
       title: "Business/Software Developer",
       company_name: "MultiFlow Solutions",
-      icon: "./images/540f84_182fc00b2a9b40509d9b1ba42773665d~mv2.avif",
+      icon: "./src/images/540f84_182fc00b2a9b40509d9b1ba42773665d~mv2.avif",
       date: "Jan 2024 - Apr 2024",
       points: [
         "Developed and integrated C# components within proprietary applications to introduce new functionality, optimizing workflows for the sales team and enhancing overall process efficiency",
@@ -57,7 +57,7 @@ export const navLinks = [
     {
       title: "Web Developer",
       company_name: "CiviConnect",
-      icon: "./images/Screenshot_2024-12-08_at_8.56.21_PM-removebg-preview.png",
+      icon: "./src/images/Screenshot_2024-12-08_at_8.56.21_PM-removebg-preview.png",
       date: "Jan 2023 - Apr 2023",
       points: [
         "Created and designed new web pages using Webflow, Javascript, HTML and CSS, for clients to help them in the online space and resulted in a better user experience for their customers",
