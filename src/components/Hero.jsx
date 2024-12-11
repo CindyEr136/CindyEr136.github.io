@@ -23,8 +23,8 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             A creative web designer and developer based in Toronto ON.
           </p>
-          <div className="w-full flex justify-center py-10 sm:py-20 md:py-32 lg:py-10">
-            <img src={cover} alt="cover" className="object-contain w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4" />
+          <div className="w-full flex justify-center py-10 sm:py-20 md:py-40 lg:py-10">
+            <img src={cover} alt="cover" className="object-contain w-full sm:w-full md:w-full lg:w-1/4" />
           </div>
         </div>
       </div>

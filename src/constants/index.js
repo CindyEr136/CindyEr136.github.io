@@ -7,10 +7,6 @@ export const navLinks = [
       id: "work",
       title: "Work",
     },
-    {
-      id: "contact",
-      title: "Contact",
-    },
   ];
 
   // #region images
@@ -107,7 +103,7 @@ export const navLinks = [
           { name: "Design Thinking" },
         ],
         image: bb,
-        source_code_link: "https://www.figma.com/proto/6g63YxCVHzfhfk3NurAy6T/Brainy-Bees?node-id=0-1&t=KZlyQorjc9pyKZKh-1",
+        source_code_link: "/BrainyBees",
       },
       {
         name: "Quiz",

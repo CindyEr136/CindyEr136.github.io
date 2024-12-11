@@ -7,21 +7,40 @@ import {
   Hero,
   Navbar,
   Works,
+  BrainyBees,
+  NavbarBack,
 } from "./components";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div>
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Works />
-        <Contact />
-      </div>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <div className="relative z-0 bg-primary">
+              <Navbar />
+              <Hero />
+              <About />
+              <Experience />
+              <Works />
+              <Contact />
+            </div>
+          }
+        />
+        <Route
+          path="/BrainyBees"
+          element={
+            <div className="relative z-0 bg-primary">
+              <NavbarBack />
+              <BrainyBees />
+              <Contact />
+            </div>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 };

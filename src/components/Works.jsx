@@ -1,41 +1,50 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import "./Card.css";
 
-const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
+const Card = ({ name, description, tags, image, source_code_link }) => {
+  let link = source_code_link;
   return (
-    <motion.div
-      variants={fadeIn("up", "spring")}
-      initial="hidden"
-      animate="show"
-      whileHover={{ scale: 1.05 }}
+    <div
+      className="card cursor-pointer"
+      onClick={
+        link.startsWith("/")
+          ? () => window.open(source_code_link, "_self")
+          : () => window.open(source_code_link, "_blank")
+      }
     >
-      <div className="bg-secondary p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer"
-      onClick={() => window.open(source_code_link, "_blank")}>
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
+      <div className="card-inner">
+        <div className="card-front bg-secondary flex-col p-6 rounded-2xl">
+          <div className="relative w-full h-[230px]">
+            <img
+              src={image}
+              alt="project_image"
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
+          <h3 className="mt-5 text-white font-bold text-[24px] w-full text-left">
+            {name}
+          </h3>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p
+                key={tag.name}
+                className={`text-[14px] text-primary text-left`}
+              >
+                #{tag.name}
+              </p>
+            ))}
+          </div>
         </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-white text-[14px]">{description}</p>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] text-primary`}>
-              #{tag.name}
-            </p>
-          ))}
+        <div className="card-back bg-secondary rounded-2xl p-3">
+          <p className="text-white text-[14px] text-center">{description}</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -54,9 +63,10 @@ const Works = () => {
           Welcome to my personal archive of projects!
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-10">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} {...project} />
+          //<ProjectCard key={`project-${index}`} {...project} />
+          <Card key={`project-${index}`} {...project} />
         ))}
       </div>
     </>
