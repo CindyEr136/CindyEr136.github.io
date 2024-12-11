@@ -31,7 +31,7 @@ const App = () => {
           }
         />
         <Route
-          path="/BrainyBees"
+          path="BrainyBees/"
           element={
             <div className="relative z-0 bg-primary">
               <NavbarBack />
