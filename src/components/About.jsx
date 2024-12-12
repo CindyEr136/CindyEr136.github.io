@@ -47,16 +47,24 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] flex flex-col gap-5"
       >
         As a software and web developer, I specialize in creating efficient,
         user-friendly solutions while leveraging my business acumen to ensure
-        that these solutions align with broader organizational goals. With a
-        strong background in both business devlopment and computer science, I
-        bring a unique blend of technical expertise and strategic thinking to
-        every project. Whether building applications or optimizing workflows, I
-        am committed to delivering results that not only meet technical
-        requirements but also drive business success.
+        that these solutions align with broader organizational goals. 
+        Thanks for taking the time to check out my work, I would love to connect!
+        <a
+            href="https://www.linkedin.com/in/cindy-er-19231a1a2/"
+            className="text-decoration-line: underline"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="mailto:er.cindy168@gmail.com"
+            className="text-decoration-line: underline"
+          >
+            Email
+          </a>
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

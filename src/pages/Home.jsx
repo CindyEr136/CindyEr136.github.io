@@ -1,4 +1,4 @@
-import { Hero, About, Experience, Works, Contact } from "../components";
+import { Hero, About, Experience, Works } from "../components";
 
 export function Home() {
   return (
@@ -7,7 +7,6 @@ export function Home() {
       <About />
       <Experience />
       <Works />
-      <Contact />
     </div>
   );
 }

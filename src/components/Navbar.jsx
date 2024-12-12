@@ -6,12 +6,7 @@ import closeIcon from "../assets/close.png";
 
 export function Navbar() {
   const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
-  const navLinks = [
-    { id: "about", title: "About" },
-    { id: "projects", title: "Project" },
-    { id: "experiences", title: "Experiences" },
-  ];
+  const navLinks = [{ id: "about", title: "About" }];
 
   const toggleResume = () => {
     const resumeUrl =
@@ -19,51 +14,6 @@ export function Navbar() {
     window.open(resumeUrl);
   };
 
-  useEffect(() => {
-    if (toggle) {
-      setActive("");
-    }
-  }, [toggle]);
-
-  const renderNavLinks = (isSecondary) => (
-    <>
-      <div
-        className={`list-none${
-          isSecondary ? "flex sm:hidden flex-col" : "hidden sm:flex flex-row"
-        } gap-6`}
-      >
-        {navLinks.map((link) => (
-          <Link
-            key={link.id}
-            to={`/${link.title}`}
-            className={`${
-              active === link.title
-                ? "text-secondary"
-                : isSecondary
-                ? "text-white"
-                : "text-secondary"
-            } hover:text-white text-[20px] font-medium cursor-pointer`}
-            onClick={() => {
-              setActive(link.title);
-              if (isSecondary) {
-                setToggle(false);
-              }
-            }}
-          >
-            {link.title}
-          </Link>
-        ))}
-        <button
-          className={`text-${
-            isSecondary ? "secondary" : "white"
-          } hover:text-white text-[20px] font-medium cursor-pointer`}
-          onClick={toggleResume}
-        >
-          Resume
-        </button>
-      </div>
-    </>
-  );
 
   return (
     <>
@@ -72,7 +22,7 @@ export function Navbar() {
       >
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
-            to="/Home"
+            to="/"
             className="flex items-center gap-2"
             onClick={() => {
               setActive("");
@@ -84,25 +34,31 @@ export function Navbar() {
               <span className="sm:block hidden">ER</span>
             </p>
           </Link>
-          {renderNavLinks(false)}
-          <div className="sm:hidden flex flex-1 justify-end items-center">
-            <img
-              src={
-                toggle
-                  ? closeIcon
-                  : "https://lohitcdn.blob.core.windows.net/portfoliocdn/Etc/menu.svg"
-              }
-              alt="menu"
-              className="w-[28px] h-[18px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-            <div
-              className={`p-4 black-gradient absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 rounded-xl foggy-glass ${
-                toggle ? "flex" : "hidden"
-              }`}
+          <div
+            className="flex list-none flex-row gap-6"
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.id}
+                to={`/${link.title}`}
+                className={`${
+                  active === link.title
+                    ? "text-secondary"
+                    : "text-white"
+                } hover:text-white text-[20px] font-medium cursor-pointer`}
+                onClick={() => {
+                  setActive(link.title);
+                }}
+              >
+                {link.title}
+              </Link>
+            ))}
+            <button
+              className="text-secondary hover:text-white text-[20px] font-medium cursor-pointer"
+              onClick={toggleResume}
             >
-              {renderNavLinks(true)}
-            </div>
+              Resume
+            </button>
           </div>
         </div>
       </nav>

@@ -1,5 +1,6 @@
 import { Navbar } from "./Navbar";
 import { Outlet } from "react-router-dom";
+import { Contact } from "./Contact";
 
 export function Layout() {
   return (
@@ -8,6 +9,7 @@ export function Layout() {
       <main>
         <Outlet />
       </main>
+      <Contact />
     </>
   );
 }
