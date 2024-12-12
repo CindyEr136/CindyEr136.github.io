@@ -1,15 +1,15 @@
+import { Hero, About, Experience, Works, Contact } from "../components";
+
 export function Home() {
   return (
-    <div>Home</div>
-  );
-}
-
-/*
-<div className="relative z-0 bg-primary">
-      <Navbar />
+    <div className="relative z-0 bg-primary">
       <Hero />
       <About />
       <Experience />
       <Works />
       <Contact />
-    </div>*/
+    </div>
+  );
+}
+
+export default Home;

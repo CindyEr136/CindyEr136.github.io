@@ -1,26 +1,17 @@
-//import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
-import { navLinks } from "../constants";
+//import { navLinks } from "../constants";
 import closeIcon from "../assets/close.png";
 
 export function Navbar() {
-  return (
-    <>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/Aimtrainer">Aim Trainer</Link>
-        <Link to="/BrainyBees">BrainyBees</Link>
-        <Link to="/Heritage">Heritage</Link>
-        <Link to="/Quiz">Quiz</Link>
-      </div>
-    </>
-  );
-}
-
-/*
-const [active, setActive] = useState("");
+  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const navLinks = [
+    { id: "about", title: "About" },
+    { id: "projects", title: "Project" },
+    { id: "experiences", title: "Experiences" },
+  ];
 
   const toggleResume = () => {
     const resumeUrl =
@@ -35,41 +26,46 @@ const [active, setActive] = useState("");
   }, [toggle]);
 
   const renderNavLinks = (isSecondary) => (
-    <ul
-      className={`list-none ${
-        isSecondary ? "flex sm:hidden" : "hidden sm:flex"
-      } flex-row gap-6`}
-    >
-      {navLinks.map((link) => (
-        <li
-          key={link.id}
-          className={`${
-            active === link.title
-              ? "text-secondary"
-              : isSecondary
-              ? "text-white"
-              : "text-secondary"
-          } hover:text-white text-[20px] font-medium cursor-pointer`}
-          onClick={() => {
-            setActive(link.title);
-            if (isSecondary) {
-              setToggle(false);
-            }
-          }}
-        >
-          <a href={`#${link.id}`}>{link.title}</a>
-        </li>
-      ))}
-      <li
-        className={`text-${
-          isSecondary ? "secondary" : "white"
-        } hover:text-white text-[20px] font-medium cursor-pointer`}
+    <>
+      <div
+        className={`list-none${
+          isSecondary ? "flex sm:hidden flex-col" : "hidden sm:flex flex-row"
+        } gap-6`}
       >
-        <button onClick={toggleResume}>Resume</button>
-      </li>
-    </ul>
+        {navLinks.map((link) => (
+          <Link
+            key={link.id}
+            to={`/${link.title}`}
+            className={`${
+              active === link.title
+                ? "text-secondary"
+                : isSecondary
+                ? "text-white"
+                : "text-secondary"
+            } hover:text-white text-[20px] font-medium cursor-pointer`}
+            onClick={() => {
+              setActive(link.title);
+              if (isSecondary) {
+                setToggle(false);
+              }
+            }}
+          >
+            {link.title}
+          </Link>
+        ))}
+        <button
+          className={`text-${
+            isSecondary ? "secondary" : "white"
+          } hover:text-white text-[20px] font-medium cursor-pointer`}
+          onClick={toggleResume}
+        >
+          Resume
+        </button>
+      </div>
+    </>
   );
 
+  return (
     <>
       <nav
         className={`${styles.paddingX} w-full flex items-center py-7 fixed top-0 z-20 backdrop-blur`}
@@ -111,4 +107,7 @@ const [active, setActive] = useState("");
         </div>
       </nav>
     </>
-    */
+  );
+}
+
+export default Navbar;
