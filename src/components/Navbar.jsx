@@ -1,11 +1,25 @@
-import React, { useEffect, useState } from "react";
+//import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import closeIcon from "../assets/close.png";
 
-const Navbar = () => {
-  const [active, setActive] = useState("");
+export function Navbar() {
+  return (
+    <>
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/Aimtrainer">Aim Trainer</Link>
+        <Link to="/BrainyBees">BrainyBees</Link>
+        <Link to="/Heritage">Heritage</Link>
+        <Link to="/Quiz">Quiz</Link>
+      </div>
+    </>
+  );
+}
+
+/*
+const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
   const toggleResume = () => {
@@ -56,14 +70,13 @@ const Navbar = () => {
     </ul>
   );
 
-  return (
     <>
       <nav
         className={`${styles.paddingX} w-full flex items-center py-7 fixed top-0 z-20 backdrop-blur`}
       >
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
-            to="/"
+            to="/Home"
             className="flex items-center gap-2"
             onClick={() => {
               setActive("");
@@ -98,7 +111,4 @@ const Navbar = () => {
         </div>
       </nav>
     </>
-  );
-};
-
-export default Navbar;
+    */

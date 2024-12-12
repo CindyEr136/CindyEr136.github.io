@@ -1,48 +1,25 @@
-import { BrowserRouter } from "react-router-dom";
-import React from "react";
-import {
-  About,
-  Contact,
-  Experience,
-  Hero,
-  Navbar,
-  Works,
-  BrainyBees,
-  NavbarBack,
-} from "./components";
-import { Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import { Home } from "./pages/Home";
+import { Aimtrainer } from "./pages/Aimtrainer";
+import { Quiz } from "./pages/Quiz";
+import { BrainyBees } from "./pages/BrainyBees";
+import { Heritage } from "./pages/Heritage";
 
-const App = () => {
+function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <div className="relative z-0 bg-primary">
-              <Navbar />
-              <Hero />
-              <About />
-              <Experience />
-              <Works />
-              <Contact />
-            </div>
-          }
-        />
-        <Route
-          path="BrainyBees/"
-          element={
-            <div className="relative z-0 bg-primary">
-              <NavbarBack />
-              <BrainyBees />
-              <Contact />
-            </div>
-          }
-        />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/Aimtrainer" element={<Aimtrainer />} />
+          <Route path="/BrainyBees" element={<BrainyBees />} />
+          <Route path="/Heritage" element={<Heritage />} />
+          <Route path="/Quiz" element={<Quiz />} />
+        </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
-};
+}
 
 export default App;

@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { Link } from "react-router-dom";
 import "./Card.css";
 
 const Card = ({ name, description, tags, image, source_code_link }) => {
@@ -13,7 +14,7 @@ const Card = ({ name, description, tags, image, source_code_link }) => {
       className="card cursor-pointer"
       onClick={
         link.startsWith("/")
-          ? () => window.open(source_code_link, "_self")
+          ? () => <Link to={source_code_link}/>
           : () => window.open(source_code_link, "_blank")
       }
     >
